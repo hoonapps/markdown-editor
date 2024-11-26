@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   const socketRef = useRef<Socket | null>(null)
 
   useEffect(() => {
-    const socket = io("http://localhost:3001")
+    const socket = io("http://localhost:3000")
     socketRef.current = socket
 
     socket.emit("join-document", { docId })
